@@ -684,7 +684,7 @@
 						<div class="logout-btn" ><i title="Edit measurment" id="edit-measurment-btn" class="fa fa-pencil-square-o edit-measurment" aria-hidden="true"></i><i  id="logout-btn" title="Logout " class="fa fa-sign-out" aria-hidden="true"></i></div>
 					</div>
 				</div>
-				<div class="row measument-select-box">
+				<div class="row measument-select-box hide">
 					<div class="col-12">
 						<div class="form-group row">
 							<label for="mesurment-brand" class="col-5 col-form-label">Select Brand </label>
@@ -1009,12 +1009,17 @@
 									<input type="text" name="weight" class="form-control input-box" id="reg-weight" placeholder="Enter Weight">
 								</div>
 							</div>
+							<div class="form-group form-check">
+								<input type="checkbox" class="form-check-input" id="term-condition">
+								<label class="form-check-label" for="term-condition"><a href="https://viubox.com/terms-of-use/">I have read and accept Terms of use</a></label>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="container">
 					<div class="row">
+
 						<!--<div class="col-12">
                             <p class="login-second-box-text">Let's get your body measurements. </p>
                         </div>
@@ -1037,7 +1042,7 @@
                             <a class="view-side-sample-img" data-title="Front Sample Image" href="#">View Sample Image</a>
                         </div>-->
 						<div class="col-12 text-center">
-							<button class="submit-btn" href="javascript:void(0)" id="register-user-submit-btn">Proceed</button>
+							<button disabled class="submit-btn" href="javascript:void(0)" id="register-user-submit-btn">Proceed</button>
 						</div>
 					</div>
 				</div>
@@ -1818,6 +1823,13 @@
 				self.parents('.haircut-picker-wrap').children(".haircut-picker").val(self.val());
 			});
 		}
+		$("#term-condition").click(function(){
+			if($(this).is(":checked")) {
+				$('#register-user-submit-btn').prop('disabled', false);
+			} else {
+				$('#register-user-submit-btn').prop('disabled', true);
+			}
+		});
 		$(document).on('click', '#register-user-submit-btn', function(event) {
 			isLoaclStorageEnabled();
 			event.preventDefault();
