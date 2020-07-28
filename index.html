@@ -1131,7 +1131,7 @@
 			<div class="register-content">
 				<div class="header-line"></div>
 				<div id="body-signup-data-error-box" class="row col-12 error-box hide"></div>
-				<div class="container hide">
+				<div class="container">
 					<div class="row">
 						<div class="col-12">
 							<p class="login-second-box-text">Add Body Data. </p>
@@ -1940,6 +1940,7 @@
 							$("#register-image-error-box").append($("<li />").text(result.message));
 						});
 						$("#register-image-error-box").show();
+						$("#register-user-image-submit-btn").prop('disabled',false);
 					} else {
 						removeLoader();
 						var mobile_upload = localStorage.getItem("mobile_upload");
@@ -3143,6 +3144,8 @@
 			var url = "https://arash-ahmadi.github.io/index.html";
 			var final_url = url + "?register_user=" + user_id;
 			qrcode.makeCode(final_url);
+		} else {
+			localStorage.setItem("mobile_upload",'No');
 		}
 		return false;
 	}
