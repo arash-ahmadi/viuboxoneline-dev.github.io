@@ -1,4 +1,4 @@
-let html = "<iframe id='receiver' class='chatbox' style='position: fixed; z-index: 1310; bottom: 0; right: 0; border: 0; height: 100vh; width: 350px; allowtransparency='true'; overflow-x: hidden; overflow-y: auto;' src='https://widget.viubox.com/index.html'></iframe>";
+let html = "<iframe id='receiver' class='chatbox' style='position: fixed; z-index: 1310; bottom: 0; right: 0; border: 0; height: 100vh; width: 350px; allowtransparency='true'; overflow-x: hidden; overflow-y: auto;' src='https://widget.viubox.com/viuboxoneline-dev.github.io/index.html'></iframe>";
 document.body.innerHTML += html;
 $("#receiver").on("load",function(){
     $(this).width(65);
@@ -37,7 +37,7 @@ $("#receiver").on("load",function(){
             if(loaded) {
                 var msg = {message: 'load-item', itemid : itemId};
                 var receiver = document.getElementById('receiver').contentWindow;
-                receiver.postMessage(msg, 'https://widget.viubox.com/index.html');
+                receiver.postMessage(msg, 'https://widget.viubox.com/viuboxoneline-dev.github.io/index.html');
             }
         } else if (event.data.message === 'viubox-login'){
             console.log('viubox-login called ' )
@@ -45,13 +45,13 @@ $("#receiver").on("load",function(){
             localStorage.setItem("id", id)
             var msg = { message: 'login', id : id };
             var receiver = document.getElementById('receiver').contentWindow;
-            receiver.postMessage(msg, 'https://widget.viubox.com/index.html');
+            receiver.postMessage(msg, 'https://widget.viubox.com/viuboxoneline-dev.github.io/index.html');
         } else if (event.data == 'loaded-threed-viewer') {
             var id = localStorage.getItem("id");
             console.log('loaded-threed-viewer called ..')
             var msg = { message: 'login', id : id };
             var receiver = document.getElementById('receiver').contentWindow;
-            receiver.postMessage(msg, 'https://widget.viubox.com/index.html');
+            receiver.postMessage(msg, 'https://widget.viubox.com/viuboxoneline-dev.github.io/index.html');
         }else if (event.data == 'loaded-avatar') {
             var itemId = localStorage.getItem("itemId");
             var loaded = localStorage.getItem("loaded");
@@ -61,7 +61,7 @@ $("#receiver").on("load",function(){
                 console.log('Calling cloth change for item id -->', itemId);
                 var msg = {message: 'load-item', itemid : itemId};
                 var receiver = document.getElementById('receiver').contentWindow;
-                receiver.postMessage(msg, 'https://widget.viubox.com/index.html');
+                receiver.postMessage(msg, 'https://widget.viubox.com/viuboxoneline-dev.github.io/index.html');
             }
         } else if (event.data == 'loaded-app') {
             var id = localStorage.getItem("id");
@@ -69,7 +69,7 @@ $("#receiver").on("load",function(){
             if (id) {
                 var msg = { message: 'login', id : id };
                 var receiver = document.getElementById('receiver').contentWindow;
-                receiver.postMessage(msg, 'https://widget.viubox.com/index.html');
+                receiver.postMessage(msg, 'https://widget.viubox.com/viuboxoneline-dev.github.io/index.html');
             }
 
         }else if (event.data == 'virtual-three-d-hide') {
