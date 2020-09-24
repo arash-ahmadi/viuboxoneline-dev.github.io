@@ -1,4 +1,3 @@
-
 <html>
 <head>
 	<title>Viubox</title>
@@ -156,9 +155,18 @@
 			width:100px;
 			height: 15px;
 		}
+        .logo-img-name {
+            height: 15px;
+            width: 37%;
+            margin-top: 3%;
+        }
+        .logo-card {
+            border: none;
+        }
 		.banner-img {
-			width:307;
-			height: 195px;
+			margin: 20px;
+			width: 305px;
+			height: 110px;
 		}
 		.score-bar {
 			margin-top: 20px;
@@ -176,16 +184,18 @@
 			
 		}
 		.footer-content {
-			background: rgb(33, 117, 243);
+			background: rgb(88 87 167);
 			margin: 0px !important;
-			padding: 5px 0px 5px 0px !important;
+			/* padding: 5px 5px 5px 0px !important; */
+			height: 40px;
+			padding: 0px !important;
 		}
 		.footer-header {
 			text-align: center;
 			color: #ffffff;
 			padding: 0 !important;
 			margin: 0 !important;
-			font-size: 12px;
+			font-size: 9px;
 		}
 		.footer-logo {
 			text-align: center;
@@ -208,7 +218,7 @@
 		.header-line {
 			height: 5px;
 			width: 100%;
-			background: rgb(33, 117, 243);
+			background: rgb(57 60 64);
 		}
 		.video-line {
 			margin-top: 35px;
@@ -641,7 +651,7 @@
 		}
 		.from-bg {
 			/* Main Page Box Background Color*/
-			background: #F9F0EC;
+			/*background: #F9F0EC;*/
 		}
 		.success-box {
 			color: green;
@@ -681,7 +691,7 @@
 			z-index: 1300 !important;
 		}
 		.bs-canvas-close{
-			top: 46px;
+			top: 22px;
 		}
 		/*Loader CSS start from here*/
 		.loader_body_data,
@@ -721,6 +731,88 @@
 		.view-measurements {
 			height: 45px;
 			cursor: pointer;
+		}
+
+        .close {
+            font-size: 18px;
+        }
+		.sign-in-div {
+			text-align: center;
+			margin-top: 40px;
+		}
+		.sign-in-text-div {
+			text-align: center;
+		}
+		.sign-in-text-img {
+			width: 60%;
+			margin-top: 3%;
+		}
+		.sign-in-email-img{
+			height: 36px;
+		}
+		.sign-in-password-img{
+			height: 36px;
+		}
+		.login-input-box {
+			background-color: #eaeaea !important;
+			border-radius: 2.25rem !important;
+		}
+		.login-form-box {
+			margin-top: 30px;
+		}
+		.submit-btn-img {
+			float: right;
+			margin-right: 10%;
+			background-image: url("img/sign-in-submit.png");
+		}
+		.sigin-submit-btn {
+			color: #5d5555;
+			margin: 10px 0;
+			border-radius: 4px;
+			cursor: pointer;
+			border: none;
+			background-size: 100% 100%;
+			width: 90px;
+			height: 32px;
+			border-radius: 12px;
+		}
+		.forgot-password-link-box {
+			padding: 15px;
+		}
+		.forgot-password-link-text-box {
+			color: #585861 !important;
+		}
+		.create-account-img {
+			height: 75px;
+			cursor: pointer;
+		}
+		.create-account-text-img {
+			height: 50px;
+			margin-top: 20px;
+		}
+		.try-without-account-img {
+			height: 38px;
+			margin-top: 20px;
+			cursor: pointer;
+			width: 100%;
+		}
+		.footer-help-img {
+			width: 35px;
+			height: 25px;
+			margin-right: 8px;
+			cursor: pointer;
+		}
+		.footer-help-box {
+			text-align: right;
+		}
+		.footer-overflow {
+			overflow: hidden !important;
+		}
+		.h-100 {
+			height: 105%!important;
+		}
+		.margin-top-5 {
+			margin-top: 5px;
 		}
 	</style>
 </head>
@@ -2073,9 +2165,14 @@
 	<!--Login div start from here -->
 	<div id="login" class="main-container hide">
 		<header class="bs-canvas-header p-3 overflow-auto">
-			<img src="img/viubox-logo.png" class="logo-img" />
+            <div class="card logo-card">
+                <img src="img/viubox-logo.png" class="logo-img" />
+            </div>
+            <div class="card logo-card">
+                <img src="img/_0018_Virtual-Fitting-Room.png" class="logo-img-name" />
+            </div>
 			<button type="button" class="bs-canvas-close float-left close main-drawer-close-btn" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h6 class="d-inline-block brand-name">Virtual Fitting Room</h6>
+			<!--<h6 class="d-inline-block brand-name">Virtual Fitting Room</h6>-->
 		</header>
 		<form name="login_user" class="form" id="login-user-form" method="POST" enctype="multipart/form-data">
 			<div class="login-content">
@@ -2085,22 +2182,52 @@
 					<!--<p>Let's Get Started</p>-->
 					<div id="login-error-box" class="row col-12 error-box hide"></div>
 					<div class="row">
-						<div class="col-8">
+						<div class="col-12">
+							<div class="sign-in-div">
+								<img src="img/sign-in.png" class="sign-in" />
+							</div>
+							<div class="sign-in-text-div">
+								<img src="img/sigin-text.png" class="sign-in-text-img" />
+							</div>
+
+							<!--<form>-->
+							<div class="login-form-box">
+								<div class="form-group row">
+									<label for="loginemail" class="col-sm-2 col-form-label"><img src="img/email.png" class="sign-in-email-img" /></label>
+									<div class="col-sm-10">
+										<input type="email" name="email" class="form-control login-input-box" id="loginemail" placeholder="Enter email">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="loginpassword" class="col-sm-2 col-form-label"><img src="img/passowrd.png" class="sign-in-password-img" /></label>
+									<div class="col-sm-10">
+										<input type="password" name="password" class="form-control login-input-box" id="loginpassword" placeholder="Enter password">
+									</div>
+								</div>
+							</div>
+							<!--</form>-->
+
 							<!--<p class="login-label">Login Using Email and Password</p>-->
-							<div class="form-group">
+						<!--<div class="form-group">
 								<label for="loginemail">Email </label>
 								<input type="email" name="email" class="form-control input-box" id="loginemail" placeholder="Enter email">
 							</div>
 							<div class="form-group">
 								<label for="loginpassword">Password </label>
 								<input type="password" name="password" class="form-control input-box" id="loginpassword" placeholder="Enter password">
-							</div>
+							</div>-->
 							<div class="form-group">
-								
-								<button class="submit-btn" id="login-submit-btn" href="javascript:void(0)">Login</button><br>
-								
-								<a class="link-box" id="signup-btn">Create Account</a>
-								<a class="link-box" id="forgot-password-btn">Forgot password</a>
+								<div class="row">
+									<div class="col-6 forgot-password-link-box">
+										<a class="link-box forgot-password-link-text-box" id="forgot-password-btn">Forgot password ?</a>
+									</div>
+									<div class="col-6">
+										<button class="sigin-submit-btn submit-btn-img" id="login-submit-btn" href="javascript:void(0)"></button><br>
+									</div>
+								</div>
+
+								<!--<a class="link-box" id="signup-btn">Create Account</a>-->
+
 							</div>
 							
 						</div>
@@ -2110,21 +2237,53 @@
 
 				<div class="login-box-second-part">
 					<div class="login-box-data">
+						<div class="row">
+							<div class="col-3">
+								<img src="img/create-account.png" id="signup-btn" class="create-account-img" />
+							</div>
+							<div class="col-8">
+								<img src="img/creating-an-account.png" class="create-account-text-img" />
+							</div>
+						</div>
 						
 						<!--<p class="login-second-box-text"><button href="javascript:void(0)" class="signup-btn" id="get-started-btn">Get Started</button></p>-->
-						<p class="login-second-box-text">Want to simply see and evaluate ViuBox?  <button class="signup-btn " id="login-demo-submit-btn" href="javascript:void(0)">Login as Demo Account</button></p>
-						<br>
-						<img src="img/widget-banner.png" class="banner-img" />
+
+						<div class="row">
+							<div class="col-12">
+								<img id="login-demo-submit-btn" src="img/try-without-account.png" class="try-without-account-img" />
+							</div>
+
+						</div>
+
+						<!--<p class="login-second-box-text">Want to simply see and evaluate ViuBox?
+
+
+							<button class="signup-btn " id="login-demo-submit-btn" href="javascript:void(0)">Login as Demo Account</button></p>
+						<br>-->
+						<div class="row">
+							<div class="col-12">
+								<img src="img/widget-banner.png" class="banner-img" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</form>
-		<footer class="bs-canvas-header p-3 overflow-auto footer-content">
-			<p class="footer-header">Version 1.0 | Powered By :</p>
-			<div class="footer-logo">
-				<img src="img/viubox_online.png" class="footer-logo-img " />
-				<!--<img src="img/syz_footer.png" class="footer-logo-img left-padding-10" />-->
+		<footer class="bs-canvas-header p-3 overflow-auto footer-content footer-overflow">
+			<div class="row margin-top-5">
+				<div class="col-6">
+					<p class="footer-header">Version 1.0 | Powered By :</p>
+					<div class="footer-logo">
+						<img src="img/viubox_online.png" class="footer-logo-img " />
+						<!--<img src="img/syz_footer.png" class="footer-logo-img left-padding-10" />-->
+					</div>
+				</div>
+				<div class="col-6 footer-help-box">
+					<img src="img/help-footer.png" class="footer-help-img " />
+				</div>
 			</div>
+
+
 		</footer>
 	</div>
 	<!--forgot password div start from here -->
