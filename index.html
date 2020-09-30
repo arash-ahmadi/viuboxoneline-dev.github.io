@@ -1730,7 +1730,7 @@
 			<p class="footer-header">Version 1.0 | Powered By :</p>
 			<div class="footer-logo">
 				<img src="img/viubox_online.png" class="footer-logo-img " />
-				<!--<img src="img/syz_footer.png" class="footer-logo-img left-padding-10" />-->
+				&lt;!&ndash;<img src="img/syz_footer.png" class="footer-logo-img left-padding-10" />&ndash;&gt;
 			</div>
 		</footer>
 	</div>
@@ -1846,7 +1846,133 @@
 	</div>
 	<!--Register div start from here -->
 	<div id="register" class="main-container hide">
-		<header class="bs-canvas-header p-3 overflow-auto">
+		<div class="mainWrapper">
+			<div class="flex flexVCenter padThirtyTwoTwetyFour borderBotBlue">
+				<div class="flexOne">
+					<img src="img/viuboxLogo.png" class="viuImg">
+					<div class="mainLogoTxt">Virtual Fitting Room</div>
+				</div>
+				<div>
+					<img src="img/cancel.svg" class="crossImg bs-canvas-close close">
+				</div>
+			</div>
+			<div class="flexOne mbthirtyTwo">
+				<div class="signInTitle">Sign up</div>
+				<div class="signInSubTitle">
+					Enter you email address to try online clothes
+				</div>
+				<div class="signInSubTitle">by viubox online</div>
+				<div id="register-error-box" class="row col-12 error-box hide margin-left-20"></div>
+				<form name="register_user" class="form-horizontal" id="register-user-form" method="POST" enctype="multipart/form-data">
+					<div class="padThirtyTwoTwetyFour">
+					<div class="flex">
+						<div class="inputImgWrapper">
+							<img src="img/userOrange.svg">
+						</div>
+						<input type="text" name="name" placeholder="Enter name" class="cutInput">
+					</div>
+					<div class="flex">
+						<div class="inputImgWrapper">
+							<img src="img/email.svg">
+						</div>
+						<input type="email" name="email" placeholder="Enter email" class="cutInput">
+					</div>
+					<div class="flex">
+						<div class="inputImgWrapper">
+							<img src="img/lock.svg">
+						</div>
+						<input type="password" name="password" placeholder="Enter password" class="cutInput">
+					</div>
+
+					<div class="flex">
+						<div class="custLabel flexOne">Select Geneder:</div>
+						<div class="flex">
+								  <span class="custom-checkbox" id="q1Yes">
+									<input checked name="gender" type="radio" value="1">
+									<span class="box">Men</span>
+							  </span>
+							<span class="custom-checkbox" id="q1No">
+										<input name="gender" type="radio" value="0">
+										<span class="box">Women</span>
+							  	</span>
+						</div>
+					</div>
+
+					<div class="flex mtbtsixteen">
+						<div class="custLabel flexOne">Height:</div>
+						<div class="flex">
+							<!--<div class="col-9">
+								<div class="input-group number-spinner height-box" >
+									<span class="input-group-btn height-left-btn" ></span>
+									<span class="input-group-btn height-input-btn">
+													<button class="btn btn-default" data-dir="dwn">
+														<span class="minus height-minus-btn">-</span>
+													</button>
+												</span>
+									<input type="text" class="form-control text-center height-text-input" name="height" value="175" id="height_val">
+									<span class="input-group-btn height-right-btn">
+													<button class="btn btn-default" data-dir="up">
+														<span class="minus height-plus-btn">+</span>
+													</button>
+												</span>
+									<span class="input-group-btn height-input-right" ></span>
+								</div>
+							</div>-->
+							<div class="quantity-control number-spinner">
+								<button type="button" class="quantity-btn" href="javascript:void(0)" data-dir="dwn">
+									<img src="img/minus.svg">
+								</button>
+								<input type="number" class="quantity-input input-number-range" value="175" name="height">
+								<button type="button" class="quantity-btn" href="javascript:void(0)" data-dir="up">
+									<img src="img/plus.svg">
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex mbthirtyTwo">
+						<div class="custLabel flexOne">weight:</div>
+						<div class="flex">
+							<div class="quantity-control number-spinner" >
+								<button type="button" class="quantity-btn" href="javascript:void(0)" data-dir="dwn">
+									<img src="img/minus.svg">
+								</button>
+								<input type="number" class="quantity-input input-number-range" value="60" name="weight">
+								<button type="button" class="quantity-btn" href="javascript:void(0)" data-dir="up">
+									<img src="img/plus.svg">
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="flex flexVCenter mtbt">
+						<a  target="_blank" href="https://viubox.com/terms-of-use/" class="flexOne forgetPass flex">
+							<div class="checkbox-input">
+								<input type="checkbox" id="term-condition">
+							</div>
+							I have read and accept Terms of use</a>
+						<button disabled class="blueBtn cursor" href="javascript:void(0)" id="register-user-submit-btn">Submit</button>
+					</div>
+					<div class="flex flexVCenter">
+						<div class="dottedBorder flexOne"></div>
+					</div>
+					<button id="back-to-login-btn" class="backBtn mbthirtyTwo cursor">
+						<img src="img/leftArrow.svg"> Back to login page
+					</button>
+				</div>
+				</form>
+			</div>
+			<div class="flex flexVCenter footer">
+				<div class="flexOne">
+					<div class="footerTxt">Version 2.3.6 | Powered by:</div>
+					<img src="img/viuboxWhiteLogo.png" class="footerImg">
+				</div>
+				<div class="footerQuestion">
+					<span>?</span>
+				</div>
+			</div>
+		</div>
+		<!--<header class="bs-canvas-header p-3 overflow-auto">
 			<img src="img/viubox-logo.png" class="logo-img" />
 			<button type="button" class="bs-canvas-close float-left close main-drawer-close-btn" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h6 class="d-inline-block brand-name">Virtual Fitting Room</h6>
@@ -1855,7 +1981,7 @@
 			<div class="register-content">
 				<div class="header-line"></div>
 				<div class="container from-bg">
-					<!--<p>Let's Get Started</p>-->
+					&lt;!&ndash;<p>Let's Get Started</p>&ndash;&gt;
 					<a class="link-box row col-12" id="already-account-btn">Already a ViuBox User?</a>
 					<div id="register-error-box" class="row col-12 error-box hide"></div>
 					<div class="row register-input-form">
@@ -1928,7 +2054,7 @@
 				<div class="container">
 					<div class="row">
 
-						<!--<div class="col-12">
+						&lt;!&ndash;<div class="col-12">
                             <p class="login-second-box-text">Let's get your body measurements. </p>
                         </div>
                         <div class="col-12 text-center">
@@ -1948,7 +2074,7 @@
                         </div>
                         <div class="col-12 text-center">
                             <a class="view-side-sample-img" data-title="Front Sample Image" href="#">View Sample Image</a>
-                        </div>-->
+                        </div>&ndash;&gt;
 						<div class="col-12 text-center">
 							<button disabled class="submit-btn" href="javascript:void(0)" id="register-user-submit-btn">Proceed</button>
 						</div>
@@ -1960,9 +2086,9 @@
 			<p class="footer-header">Version 1.0 | Powered By :</p>
 			<div class="footer-logo">
 				<img src="img/viubox_online.png" class="footer-logo-img " />
-				<!--<img src="img/syz_footer.png" class="footer-logo-img left-padding-10" />-->
+				&lt;!&ndash;<img src="img/syz_footer.png" class="footer-logo-img left-padding-10" />&ndash;&gt;
 			</div>
-		</footer>
+		</footer>-->
 	</div>
 	<!--Register user image upload div start from here -->
 	<div id="register-image-upload" class="main-container hide">
@@ -2124,7 +2250,7 @@
 				</form>
 			</div>
 			<div class="padThirtyTwoTwetyFour flex flexVCenter">
-				<div id="get-started-btn" class="createAcct cursor">
+				<div id="signup-btn" class="createAcct cursor">
 					<img src="img/user.svg" class="userImg">
 					<span>Create</span>
 					<span>Account</span>
@@ -2210,12 +2336,62 @@
 	</div>
 	<!--forgot password div start from here -->
 	<div id="forgot-password" class="main-container hide">
-		<header class="bs-canvas-header p-3 overflow-auto">
+		<div class="mainWrapper">
+			<div class="flex flexVCenter padThirtyTwoTwetyFour borderBotBlue">
+				<div class="flexOne">
+					<img src="img/viuboxLogo.png" class="viuImg">
+					<div class="mainLogoTxt">Virtual Fitting Room</div>
+				</div>
+				<div>
+					<img src="img/cancel.svg" class="crossImg">
+				</div>
+			</div>
+			<div class="flexOne">
+				<div class="signInTitle">Let's Reset Password</div>
+				<div class="signInSubTitle">
+					Enter you email address to try online clothes
+				</div>
+				<div class="signInSubTitle">by viubox online</div>
+				<div id="forgot-password-error-box" class="error-box hide margin-left-20"></div>
+				<div id="forgot-password-success-box" class="success-box hide margin-left-20"></div>
+				<form name="forgot_password" id="forgot-password-form" method="POST" enctype="multipart/form-data">
+					<input type="hidden" name="url" id="current_url">
+					<div class="padThirtyTwoTwetyFour">
+					<div class="flex">
+						<div class="inputImgWrapper">
+							<img src="img/email.svg">
+						</div>
+						<input type="email" name="email" placeholder="Enter email" class="cutInput">
+					</div>
+					<div class="flex flexVCenter mtbt">
+						<a class="flexOne forgetPass"> </a>
+						<button type="button" id="forgot-password-submit-btn"  class="blueBtn cursor">Submit</button>
+					</div>
+					<div class="flex flexVCenter">
+						<div class="dottedBorder flexOne"></div>
+					</div>
+					<button  href="javascript:void(0)" id="back-to-login-btn" class="backBtn cursor">
+						<img src="img/leftArrow.svg"> Back to login page
+					</button>
+				</div>
+				</form>
+			</div>
+			<div class="flex flexVCenter footer">
+				<div class="flexOne">
+					<div class="footerTxt">Version 2.3.6 | Powered by:</div>
+					<img src="img/viuboxWhiteLogo.png" class="footerImg">
+				</div>
+				<div class="footerQuestion">
+					<span>?</span>
+				</div>
+			</div>
+		</div>
+		<!--<header class="bs-canvas-header p-3 overflow-auto">
 			<img src="img/viubox-logo.png" class="logo-img" />
 			<button type="button" class="bs-canvas-close float-left close main-drawer-close-btn" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h6 class="d-inline-block brand-name">Virtual Fitting Room</h6>
 		</header>
-		<!--<form >-->
+		&lt;!&ndash;<form >&ndash;&gt;
 		<div class="login-content">
 			<div class="header-line"></div>
 			<div class="card from-bg">
@@ -2237,18 +2413,18 @@
 			<div class="login-box-second-part">
 				<div class="login-box-data">
 					<p class="login-second-box-text">Back to login ? <button href="javascript:void(0)" id="back-to-login-btn" class="signup-btn">Login</button></p>
-					<!--<p class="login-second-box-text">Perfer to processed without sign up? <button href="javascript:void(0)" class="signup-btn" id="get-started-btn">Get Started</button></p>-->
+					&lt;!&ndash;<p class="login-second-box-text">Perfer to processed without sign up? <button href="javascript:void(0)" class="signup-btn" id="get-started-btn">Get Started</button></p>&ndash;&gt;
 				</div>
 			</div>
 		</div>
-		<!--</form>-->
+		&lt;!&ndash;</form>&ndash;&gt;
 		<footer class="bs-canvas-header p-3 overflow-auto footer-content">
 			<p class="footer-header">Version 1.0 | Powered By :</p>
 			<div class="footer-logo">
 				<img src="img/viubox_online.png" class="footer-logo-img " />
-				<!--	<img src="img/syz_footer.png" class="footer-logo-img left-padding-10" />-->
+				&lt;!&ndash;	<img src="img/syz_footer.png" class="footer-logo-img left-padding-10" />&ndash;&gt;
 			</div>
-		</footer>
+		</footer>-->
 	</div>
 	<!-- reset password div start from here -->
 	<div id="reset-password" class="main-container hide">
@@ -2632,6 +2808,10 @@
 		$(document).on('change', '#height_val', function () {
 			$(".number-spinner button").closest('.number-spinner').find('input').val($("#height_val").val());
 			$("#height").val($("#height_val").val())
+		});
+		$(document).on('change', '.input-number-range', function () {
+			$(".number-spinner button").closest('.number-spinner').find('input').val($(".input-number-range").val());
+			$("#height").val($(".input-number-range").val())
 		});
 		$(document).on('click', '#reset-password-submit-btn', function(event) {
 			isLoaclStorageEnabled();
