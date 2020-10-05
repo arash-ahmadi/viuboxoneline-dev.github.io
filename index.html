@@ -858,14 +858,17 @@
 							<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
 								<div class="card-body">
 									<div id="mesurment-details-div" class="avtar-img-container hide">
-										<img src="img/avatar_new.png" class="taggd img-avtar" >
-									</div>
-									<div id="mesurment-avatar" class="avtar-img-container">
 										<div class="switchContainer" id="switchContainer">
 											<div class="switch" id="switch"></div>
 											<div class="switchlabel switchleft">Circumferences</div>
 											<div class="switchlabel switchright">Length</div>
 										</div>
+										<img src="img/avatar_new.png" class="taggd img-avtar" >
+										<button class="backBtn blueSmall cursor" id="back-to-login-btn">
+											<img src="img/arrowLeftBlue.png" /> Back to main page
+										</button>
+									</div>
+									<div id="mesurment-avatar" class="avtar-img-container">
 										<div class="men-avatar avatar-left-margin" width="300" height="400" style="display:none;">
 											<svg id="Men" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="400" viewBox="0 0 300 400">
 												<defs>
@@ -5285,6 +5288,10 @@
 						$("#measurement-rating-box").css('color','green');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','green');
+						$(".fl-number-string").css('color','green');
+						$(".fl-bar").css('stroke','green');
 					} else if (rating == 8) {
 						$("#measurement-result-box").css('color','#42cf42');
 						$("#measurement-result-box").text(comment);
@@ -5292,6 +5299,10 @@
 						$("#measurement-rating-box").css('color','#42cf42');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','#42cf42');
+						$(".fl-number-string").css('color','#42cf42');
+						$(".fl-bar").css('stroke','#42cf42');
 					} else if (rating == 6) {
 						$("#measurement-result-box").css('color','#b7dd43');
 						$("#measurement-result-box").text(comment);
@@ -5299,6 +5310,10 @@
 						$("#measurement-rating-box").css('color','#b7dd43');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','#b7dd43');
+						$(".fl-number-string").css('color','#b7dd43');
+						$(".fl-bar").css('stroke','#b7dd43');
 					} else if (rating == 5) {
 						$("#measurement-result-box").css('color','#dd7543');
 						$("#measurement-result-box").text(comment);
@@ -5306,6 +5321,10 @@
 						$("#measurement-rating-box").css('color','#dd7543');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','#dd7543');
+						$(".fl-number-string").css('color','#dd7543');
+						$(".fl-bar").css('stroke','#dd7543');
 					} else if (rating == 4) {
 						$("#measurement-result-box").css('color','#932216');
 						$("#measurement-result-box").text(comment);
@@ -5313,6 +5332,10 @@
 						$("#measurement-rating-box").css('color','#932216');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','#932216');
+						$(".fl-number-string").css('color','#932216');
+						$(".fl-bar").css('stroke','#932216');
 					} else {
 						$("#measurement-result-box").css('color','red');
 						$("#measurement-result-box").text(comment);
@@ -5320,6 +5343,10 @@
 						$("#measurement-rating-box").css('color','red');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','red');
+						$(".fl-number-string").css('color','red');
+						$(".fl-bar").css('stroke','red');
 					}
 				} else {
 					$("#measurement-result-box").hide();
@@ -5412,6 +5439,10 @@
 						$("#measurement-rating-box").css('color','green');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','green');
+						$(".fl-number-string").css('color','green');
+						$(".fl-bar").css('stroke','green');
 					} else if (rating == 8) {
 						$("#measurement-result-box").css('color','#42cf42');
 						$("#measurement-result-box").html("Fitting Comments : "  +  $(this).val()+'<br />');
@@ -5419,6 +5450,10 @@
 						$("#measurement-rating-box").css('color','#42cf42');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','#42cf42');
+						$(".fl-number-string").css('color','#42cf42');
+						$(".fl-bar").css('stroke','#42cf42');
 					} else if (rating == 6) {
 						$("#measurement-result-box").css('color','#b7dd43');
 						$("#measurement-result-box").html("Fitting Comments : "  +  $(this).val()+'<br />');
@@ -5426,6 +5461,10 @@
 						$("#measurement-rating-box").css('color','#b7dd43');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','#b7dd43');
+						$(".fl-number-string").css('color','#b7dd43');
+						$(".fl-bar").css('stroke','#b7dd43');
 					} else if (rating == 5) {
 						$("#measurement-result-box").css('color','#dd7543');
 						$("#measurement-result-box").html("Fitting Comments : "  +  $(this).val()+'<br />');
@@ -5433,6 +5472,10 @@
 						$("#measurement-rating-box").css('color','#dd7543');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','#dd7543');
+						$(".fl-number-string").css('color','#dd7543');
+						$(".fl-bar").css('stroke','#dd7543');
 					} else if (rating == 4) {
 						$("#measurement-result-box").css('color','#932216');
 						$("#measurement-result-box").html("Fitting Comments : "  +  $(this).val()+'<br />');
@@ -5440,6 +5483,10 @@
 						$("#measurement-rating-box").css('color','#4d1894');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','#4d1894');
+						$(".fl-number-string").css('color','#4d1894');
+						$(".fl-bar").css('stroke','#4d1894');
 					} else {
 						$("#measurement-result-box").css('color','red');
 						$("#measurement-result-box").html("Fitting Comments : "  +  $(this).val()+'<br />');
@@ -5447,6 +5494,10 @@
 						$("#measurement-rating-box").css('color','red');
 						$("#measurement-rating-box").show();
 						$("#measurement-result-box").show();
+
+						$(".commentTitle").css('color','red');
+						$(".fl-number-string").css('color','red');
+						$(".fl-bar").css('stroke','red');
 					}
 				} else {
 					$("#measurement-result-box").hide();
